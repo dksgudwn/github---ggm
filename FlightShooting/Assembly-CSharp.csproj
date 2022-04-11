@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\scripts\PositionScroller.cs" />
     <Compile Include="Assets\scripts\PlayerScoreViewer.cs" />
+    <Compile Include="Assets\scripts\Meteorite.cs" />
     <Compile Include="Assets\scripts\Twinkle.cs" />
     <Compile Include="Assets\scripts\Projectile.cs" />
     <Compile Include="Assets\scripts\EnemySpawner.cs" />
@@ -70,9 +71,8 @@
     <Compile Include="Assets\scripts\PlayerHp.cs" />
     <Compile Include="Assets\scripts\PositionAutoDestroyer.cs" />
     <Compile Include="Assets\scripts\Weapon.cs" />
-    <Compile Include="Assets\scripts\Client.cs" />
-    <Compile Include="Assets\scripts\ui.cs" />
-    <Compile Include="Assets\scripts\TestUIManager.cs" />
+    <Compile Include="Assets\scripts\ButtonEvent.cs" />
+    <Compile Include="Assets\scripts\ResultScoreViewer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -92,11 +92,9 @@
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
-    <None Include="Assets\Packages\WebSocketSharp-netstandard.1.0.1\lib\netstandard2.0\websocket-sharp.xml" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
-    <None Include="Assets\Packages\WebSocketSharp-netstandard.1.0.1\lib\netstandard2.0\websocket-sharp.dll" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
   </ItemGroup>
   <ItemGroup>
@@ -321,9 +319,6 @@
     </Reference>
     <Reference Include="UnityEditor.UnityConnectModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.30f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
-    </Reference>
-    <Reference Include="websocket-sharp">
-      <HintPath>Assets\Packages\WebSocketSharp-netstandard.1.0.1\lib\netstandard2.0\websocket-sharp.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.30f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>

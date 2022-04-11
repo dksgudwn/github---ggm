@@ -1,7 +1,10 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField]
+    private string nextSceneName;    
     [SerializeField]
     private stageData stageData;
     [SerializeField]
@@ -13,7 +16,7 @@ public class PlayerController : MonoBehaviour
     public int Score
     {
         set => score = Mathf.Max(0, value);
-        get => Score;
+        get => score;
     }
            
         private void Awake()
@@ -44,5 +47,11 @@ public class PlayerController : MonoBehaviour
     {
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, stageData.LimitMin.x, stageData.LimitMax.x),
                                          Mathf.Clamp(transform.position.y, stageData.LimitMin.y, stageData.LimitMax.y));
+    }
+
+    public void OnDie()
+    {
+        PlayerPrefs.SetInt("Score", score);
+        SceneManager.LoadScene(nextSceneName);
     }
 }

@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerHp : MonoBehaviour
@@ -8,7 +7,7 @@ public class PlayerHp : MonoBehaviour
     private float maxHp= 10;
     private float currentHp;
     private SpriteRenderer spriteRenderer;
-
+    private PlayerController playerController;
     public float MaxHp => maxHp;
     public float CurrentHp => currentHp;
 
@@ -16,6 +15,7 @@ public class PlayerHp : MonoBehaviour
     {
         currentHp = maxHp;
         spriteRenderer = GetComponent<SpriteRenderer>();
+        playerController = GetComponent<PlayerController>();
     }
 
     public void TakeDamege(float damage)
@@ -27,8 +27,7 @@ public class PlayerHp : MonoBehaviour
 
         if (currentHp <= 0)
         {
-            Debug.Log("Player Hp : 0.. Die");
-            Destroy(gameObject);
+            playerController.OnDie();
         }
     }
 

@@ -8,10 +8,11 @@ public class Enemy : MonoBehaviour
     private int damage = 1;
     [SerializeField]
     private int scorePoint = 100;
+    private PlayerController playerController;
 
     private void Awake()
     {
-     //   playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -24,7 +25,8 @@ public class Enemy : MonoBehaviour
 
     public void OnDie()
     {
-       // playerController.Score += scorePoint;
+        playerController.Score += scorePoint;
+        
         Destroy(gameObject);
     }
 }
