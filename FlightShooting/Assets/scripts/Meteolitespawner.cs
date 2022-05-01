@@ -11,9 +11,9 @@ public class Meteolitespawner : MonoBehaviour
     [SerializeField]
     private GameObject meteoritePrefab;
     [SerializeField]
-    private float minSpawnTime = 1.0f;
+    private float minSpawnTime = 0.1f;
     [SerializeField]
-    private float maxSpawnTime = 4.0f;
+    private float maxSpawnTime = 1.0f;
 
     private void Awake()
     {
