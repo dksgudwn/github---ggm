@@ -19,7 +19,7 @@ public class PlayerScoreViewer : MonoBehaviour
     private void Update()
     {
         textScore.text = "Score "+PlayerController.Score;
-        if(PlayerController.Score>=1000)
+        if(PlayerController.Score>=5000)
         {
             SceneManager.LoadScene("GameClear");
         }
